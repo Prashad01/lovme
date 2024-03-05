@@ -31,6 +31,6 @@ function moveButtonRandomly(button) {
     moveButtonRandomly(button);
   }, 1000); // Change the delay as needed
 }
-document.getElementById("yesBtn").addEventListener("click", function() {
+document.getElementById("Button-1").addEventListener("click", function() {
   window.location.href = "yes.html";
 });
