@@ -5,15 +5,114 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Developed By Prashad</title>
 <link rel="stylesheet" href="style.css">
+<style>
+    h1{
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 30px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+    .button-1 {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #18181a;
+    color: #18181a;
+    display: inline-block;
+    font-size: 25px;
+    line-height: 23px;
+    width: 100px;
+    padding: 18px 18px 17px;
+    text-decoration: none;
+    cursor: pointer;
+    background: #fff;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-1 span:first-child {
+    position: relative;
+    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 10;
+  }
+  
+  .button-1 span:last-child {
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 100;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(225%) translateX(-50%);
+    height: 14px;
+    line-height: 13px;
+  }
+  
+  .button-1:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(230, 34, 248);
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+  }
+  
+  .button-1:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+  }
+  
+  .button-1:hover span:last-child {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+  }
+  
+</style>
 </head>
 <body>
 <div class="container">
     <div class="card">
-    <h1>Do You Love Me!</h1> <br><br>
-    <button id="yesBtn"> YES</button>
-    <button id="moveButton">NO</button>
-        <br> <br> <br> <br><br>
-        <h5> Don't try to touch the "NO" button<h5>
+        <script>
+            // Prompt the user to input their name
+            var userName = prompt("Please Enter Your Name:");
+            
+            // Display the name on the webpage
+            document.write("<h1>Do You Love Me, " + userName + "!</h1>");
+            </script>
+            <br><br>
+            <button class="button-1" role="button"><span class="text">YES</span><span>😍😘</span></button>
+            <button class="button-1" role="button" id="moveButton"><span class="text">NO</span><span>😡😠</span></button>
+
 </div>
 </div>
 <script src="script.js"></script>
