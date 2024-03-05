@@ -184,8 +184,16 @@ margin-bottom: 50px;
       </h1>
       
       <br><br><br><br>
-      
-      
+      <audio id="myAudio" auto_play>
+          <source src="love_you.m4a" type="audio/mpeg">
+    </audio>
+    <script> 
+         window.addEventListener('DOMContentLoaded', (event) => {
+        var audio = document.getElementById("myAudio");
+        audio.play();
+    });
+    </script>
+    
       
 </body>
 </html>
