@@ -9,19 +9,4 @@ body {
   }
 
 
-  button {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    justify-content: space-between;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
   
